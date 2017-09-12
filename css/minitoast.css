@@ -1,0 +1,14 @@
+/*
+    minitoast.css
+*/
+
+#divMiniToast{
+    display: none;
+
+    background-color: greenyellow;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    /* ca commence en haut a gauche et dans le sens des aiguilles d'une montre */
+    border-radius: 10px 10px 10px 10px;
+}

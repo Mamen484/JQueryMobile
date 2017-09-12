@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Bloc Note</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="../library/jqm/jquery.mobile.css" />
+
+    </head>
+
+    <body>
+        <!-- Début de la 1ere page -->
+        <div data-role="page" id="page1">
+
+            <div data-role="header">
+                <h1>En-tête page 1</h1>
+            </div><!-- /header -->
+
+            <div data-role="content">
+                <p>Laissez votre méssage</p>
+
+                <!--Le titre de mon message-->
+                <label>Titre</label>
+                <input type="text" name="titre" value="" />
+
+                <!--Le contenu de mon message-->
+                <label>Message</label>
+                <textarea id="message" name="message" onchange="sessionStorage.message = this.value"></textarea>
+
+                <!--Pour mémoriser, effacer ou récupèrer mon message-->
+                <input type="button" value="Mémoriser" id="stockage">
+                <input type="button" value="Effacer">
+                <input type="button" value="Récupérer" id="lecture">
+
+                <!--Basculer vers la page 2-->
+                <p><a href="#page2" data-role="button" data-transition="flip">Voir votre note</a></p>
+
+            </div><!-- /content -->
+
+            <div data-role="footer" data-position="fixed">
+                <p>Pied de la page 1</p>
+            </div><!-- /footer -->
+
+            <!--stockage-->
+            <script>
+                // Récupèrer et envoyer vers la page 2
+                // Méthode de stockage
+            </script>
+
+        </div><!-- /page -->
+        <!-- Fin de la 1ere page -->
+        <!------------------------------------------------------------------------------------>
+        <!-- Début de la 2eme page -->
+        <div data-role="page" id="page2">
+
+            <div data-role="header" data-add-back-btn="true" data-back-btn-text="Précédent">
+                <h1>En-tête page 2</h1>
+            </div><!-- /header -->
+
+            <div data-role="content">
+                <p>Voici votre méssage</p>
+
+                // Retourne le contenu de l'élément input
+                <script>
+                   var titre= $('#titre').val();
+                    var message= $('#message').val();
+					localStorage.setItem(titre, message);
+                </script>
+
+                <!--Afficher mon message récupèrer grace à mes input-->
+
+                <!--Basculer vers la page 1-->
+                <p><a href="#page1" data-role="button" data-transition="flow">Créer une nouvelle note</a></p>
+
+            </div><!-- /content -->
+
+            <div data-role="footer" data-position="fixed">
+                <p>Pied de la page 2</p>
+            </div><!-- /footer -->
+
+        </div><!-- /page -->
+        <!-- Fin de la 2eme page -->
+
+        <script src="../library/jquery/jquery.js"></script>
+        <script src="../library/jqm/jquery.mobile.js"></script>
+    </body>
+
+</html>

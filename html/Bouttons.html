@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Bouttons</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="../library/jqm/jquery.mobile.css" />
+
+        <script src="../library/jquery/jquery.js"></script>
+        <script src="../library/jqm/jquery.mobile.js"></script>
+    </head>
+
+    <body>
+        <section data-role="page">
+
+            <header data-role="header">
+                <nav data-role="navbar">
+                    <a href="#" data-role="button" classe="ui-btn-active">Catalogue</a>
+                    <a href="#" data-role="button">Connexion</a>
+                    <a href="#" data-role="button">Déconnexion</a>
+                </nav>
+                <!--                <h3>En-tête</h3>-->
+            </header><!-- /header -->
+
+            <div data-role="content">
+                <p>Hello jQuery Mobile</p>
+            </div><!-- /content -->
+
+            <footer data-role="footer" data-position="fixed">
+                <h3>Pied</h3>
+            </footer>
+
+        </section><!-- /page -->
+
+
+        <script>
+            /*
+             * ApplicationMonoDoc.js
+             */
+
+            $(document).on("pagecreate", function() {
+                // Recuperation des boutons
+                var tElements = $(":jqmData(role='button')");
+                console.log(tElements);
+                console.log(tElements.length);
+                // Changement de la couleur du texte des boutons
+                tElements.each(function() {
+                    console.log($(this).attr("href"));
+                    $(this).css("color", "red");
+                });
+            }
+            );
+
+//            $(document).on('pagecreate', init);
+        </script>
+
+    </body>
+</html>

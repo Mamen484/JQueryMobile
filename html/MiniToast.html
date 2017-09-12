@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+MiniToastTest.html
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="../css/minitoast.css">
+        <title>MiniToastTest.html</title>
+    </head>
+
+    <body>
+
+        <!-- Une <div> pour le Toast -->
+        <div id="divMiniToast">
+        </div>
+
+        <div>
+            <h3>Mini Toast</h3>
+        </div>
+
+        <script src="../library/jquery/jquery.js"></script>
+        <script src="../js/MiniToast.js"></script>
+
+        <script>
+            setTimeout(afficherMiniToast, 3000);
+
+            function afficherMiniToast() {
+                console.log("afficherMiniToast");
+                toast("Modification réussie", "long", "gris");
+            }
+        </script>
+
+    </body>
+</html>

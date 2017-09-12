@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="../library/jqm/jquery.mobile.css" />
+
+        <script src="../library/jquery/jquery.js"></script>
+        <script src="../library/jqm/jquery.mobile.js"></script>
+    </head>
+
+    <body>
+        <!-- Début de la 1ere page -->
+        <div data-role="page" id="page1">
+
+            <div data-role="header">
+                <h1>En-tête page 1</h1>
+            </div><!-- /header -->
+
+            <div data-role="content">
+                <p>jQuery Mobile Multi-pages<br/>Voici la page 1</p>
+                <p>
+                    <a href="#page2" data-role="button" data-transition="flip">Vers la page 2</a>
+                </p>
+            </div><!-- /content -->
+
+            <div data-role="footer" data-position="fixed">
+                <p>Pied de la page 1</p>
+            </div><!-- /footer -->
+
+        </div><!-- /page -->
+        <!-- Fin de la 1ere page -->
+
+
+
+        <!-- Début de la 2eme page -->
+        <div data-role="page" id="page2">
+
+            <div data-role="header" data-add-back-btn="true" data-back-btn-text="Précédent">
+                <h1>En-tête page 2</h1>
+            </div><!-- /header -->
+
+            <div data-role="content">
+                <p>jQuery Mobile Multi-pages<br/>Voici la page 2</p>
+                <p>
+                    <a href="#page1" data-role="button" data-transition="flow">Retourner à la page 1</a>
+                </p>
+            </div><!-- /content -->
+
+            <div data-role="footer" data-position="fixed">
+                <p>Pied de la page 2</p>
+            </div><!-- /footer -->
+
+        </div><!-- /page -->
+        <!-- Fin de la 2eme page -->
+
+    </body>
+
+</html>
